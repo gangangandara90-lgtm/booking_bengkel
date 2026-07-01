@@ -1,0 +1,375 @@
+.admin-shell {
+  min-height: 100vh;
+  background: #f1f5f9;
+  display: flex;
+}
+
+.sidebar {
+  width: 280px;
+  background: #0f172a;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 24px 18px;
+  z-index: 20;
+}
+
+.sidebar-brand {
+  color: #f59e0b;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 26px;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.22s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  color: #fff;
+  background: rgba(245, 158, 11, 0.18);
+}
+
+.admin-main {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  min-height: 100vh;
+}
+
+.admin-navbar {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  min-height: 72px;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.admin-content {
+  padding: 28px;
+}
+
+.page-card {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.06);
+}
+
+.stat-card {
+  border: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(245, 158, 11, 0.16);
+  color: #d97706;
+}
+
+.table thead th {
+  color: #64748b;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table tbody td {
+  vertical-align: middle;
+}
+
+.btn-soft-warning {
+  background: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+  border: 0;
+}
+
+.btn-soft-warning:hover {
+  background: rgba(245, 158, 11, 0.25);
+  color: #92400e;
+}
+
+.empty-state {
+  border: 1px dashed #cbd5e1;
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 999px;
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    min-height: auto;
+    display: block;
+  }
+
+  .admin-shell {
+    display: block;
+  }
+
+  .admin-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .admin-content {
+    padding: 18px;
+  }
+}
+
+.admin-map-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #f8fafc;
+  padding: 10px;
+}
+
+.admin-map-frame {
+  width: 100%;
+  min-width: 240px;
+  height: 150px;
+  border: 0;
+  border-radius: 12px;
+  background: #e2e8f0;
+}
+
+.payment-proof-thumb-link {
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 4px;
+  background: #fff;
+}
+
+.payment-proof-thumb {
+  width: 86px;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.table-responsive {
+  border-radius: 18px;
+}
+
+@media (max-width: 1200px) {
+  .table {
+    min-width: 920px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-navbar {
+    padding: 12px 16px;
+    min-height: auto;
+  }
+
+  .admin-content {
+    padding: 14px;
+  }
+
+  .sidebar {
+    padding: 18px 14px;
+  }
+
+  .sidebar .nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .sidebar .nav-link {
+    margin-bottom: 0;
+    font-size: .9rem;
+    padding: 10px 12px;
+  }
+
+  .page-card {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar .nav {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-content h2 {
+    font-size: 1.45rem;
+  }
+
+  .payment-proof-thumb {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.admin-payment-method {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-payment-method img {
+  width: 72px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  flex: 0 0 auto;
+}
+
+.payment-proof-thumb-link {
+  border: 0;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.payment-proof-thumb-link:hover .payment-proof-thumb {
+  transform: scale(1.04);
+}
+
+.payment-proof-thumb {
+  transition: transform .18s ease;
+}
+
+.proof-view-label {
+  display: block;
+  margin-top: 6px;
+  color: #2563eb;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.proof-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(2, 6, 23, .72);
+  backdrop-filter: blur(6px);
+}
+
+.proof-modal-content {
+  width: min(920px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  border-radius: 26px;
+  background: #fff;
+  padding: clamp(18px, 3vw, 28px);
+  box-shadow: 0 28px 86px rgba(0,0,0,.34);
+}
+
+.proof-modal-image {
+  width: 100%;
+  max-height: 68vh;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.mechanic-admin-photo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px;
+  border-radius: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.mechanic-admin-photo,
+.mechanic-admin-list-photo {
+  object-fit: cover;
+  background: #fff;
+  border: 2px solid rgba(245, 158, 11, .65);
+}
+
+.mechanic-admin-photo {
+  width: 108px;
+  height: 108px;
+  border-radius: 28px;
+}
+
+.mechanic-admin-list-photo {
+  width: 76px;
+  height: 76px;
+  border-radius: 22px;
+  flex: 0 0 auto;
+}
+
+.mechanic-admin-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 18px;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, .06);
+}
+
+.admin-mekanik-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-mekanik-cell img {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid rgba(245, 158, 11, .55);
+  background: #fff;
+  flex: 0 0 auto;
+}
+
+.admin-mekanik-cell small {
+  display: block;
+  color: #64748b;
+  line-height: 1.25;
+}
+
+@media (max-width: 576px) {
+  .mechanic-admin-photo-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mechanic-admin-photo {
+    width: 96px;
+    height: 96px;
+  }
+}

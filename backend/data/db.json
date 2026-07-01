@@ -1,0 +1,19 @@
+{
+  "admins": [
+    {
+      "id": "ADM-260701-001",
+      "nama": "Admin Bengkel",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin",
+      "createdAt": "2026-07-01T08:00:00+07:00"
+    }
+  ],
+  "pelanggan": [],
+  "mekanik": [],
+  "layanan": [],
+  "booking": [],
+  "servis": [],
+  "mogok": [],
+  "pembayaran": []
+}
